@@ -1,0 +1,42 @@
+I. Análisis en el Dominio del Tiempo (Método Clásico)
+
+1. Ecuación y Solución General (Primer Orden)
+El régimen transitorio se rige por la ecuación diferencial general: $$a_1 \frac{dD(t)}{dt} + a_0 D(t) = g(t) \text{$$$$}$$
+La solución total D(t) se compone de la respuesta homogénea (transitoria) y la respuesta particular (permanente): $$D(t) = D_0(t) + D_\infty(t) \text{$$$$}$$
+• Respuesta Natural (D_0(t)): Solución de la ecuación homogénea que tiende a cero cuando t→∞.
+• Régimen Permanente (D_\infty(t)): Coincide con el valor de D(t) cuando t→∞.
+2. Componente Natural y Constante de Tiempo (τ)
+La forma de la respuesta natural para un circuito de primer orden es: $$D_0(t) = K e^{-\frac{t}{\tau}} \text{$$$$}$$
+Donde la Constante de Tiempo (\tau) se define a partir de los coeficientes de la ecuación diferencial como: $$\tau = \frac{a_1}{a_0} \text{$$$$}$$
+3. Determinación de la Solución Final
+Para obtener la solución final D(t), sustituimos D 
+0
+​
+ (t) y reorganizamos la ecuación, obteniendo la forma estándar de la solución: $$D(t) = (D(0^+) - D_\infty(0^+)) e^{-\frac{t}{\tau}} + D_\infty(t) \text{$$$$}$$
+Donde la constante K es: $$K = D(0^+) - D_\infty(0^+) \text{$$$$}$$
+Para usar esta fórmula, necesitamos tres valores: τ, D 
+∞
+​
+ (0 
++
+ ) y D(0 
++
+ ).
+Ya definimos τ. D 
+∞
+​
+ (0 
++
+ ) es el valor de régimen permanente de la función evaluado en t=0 
++
+ .
+Ahora centrémonos en el primer valor: D(0^+) (Condición Inicial). Este valor se determina a partir del estado del circuito justo antes del cambio (t=0 
+−
+ ). Para esto, debemos aplicar las condiciones de continuidad de los elementos almacenadores de energía.
+¿Podrías indicar, basándote en los principios de continuidad, qué magnitud (tensión u o intensidad i) debe ser continua en el instante del cambio (t=0 
+−
+  a t=0 
++
+ ) para:
+1. Un condensador?
+2. Una bobina?
