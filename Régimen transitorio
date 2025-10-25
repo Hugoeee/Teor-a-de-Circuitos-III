@@ -1,59 +1,105 @@
-1. Ecuación General (Primer Orden)
-Un circuito con un único elemento almacenador de energía (RC o RL) se describe por una ecuación diferencial lineal de primer orden: $$a_1 \frac{dD(t)}{dt} + a_0 D(t) = g(t) \text{$$$$}$$
-Donde D(t) es la magnitud (tensión o intensidad) que buscamos, y g(t) es la excitación.
-2. La Solución Total
-La solución D(t) es la suma de la respuesta natural (D 
-0
-​
- (t) o D 
-h
-​
- (t)) y la respuesta en régimen permanente (D 
-∞
-​
- (t) o D 
-p
-​
- (t)): $$D(t) = D_0(t) + D_\infty(t) \text{$$$$}$$
-• D 
-0
-​
- (t) (Respuesta natural): Es la solución de la ecuación homogénea. Tiende a cero cuando t→∞.
-• D 
-∞
-​
- (t) (Régimen permanente): Es la solución particular y coincide con el valor de D(t) cuando t→∞.
-3. Componente Natural y Constante de Tiempo (τ)
-a. Forma de la Respuesta Natural: Se obtiene al resolver la ecuación homogénea igualada a cero: $$a_1 \frac{dD(t)}{dt} + a_0 D(t) = 0 \text{$$$$}$$ La solución es de la forma: $$D_0(t) = K e^{\lambda t} \text{$$$$}$$ Donde λ=− 
-τ
-1
-​
- . Sustituyendo, obtenemos: $$D_0(t) = K e^{-\frac{t}{\tau}} \text{$$$$}$$
-b. Constante de Tiempo (\tau): Se define a partir de los coeficientes a 
-1
-​
-  y a 
-0
-​
- : $$\tau = \frac{a_1}{a_0} \text{$$$$}$$ Solo tiene sentido definir τ en circuitos con un único elemento almacenador de energía. τ es el tiempo que tardaría la función en alcanzar el valor final si variara al mismo ritmo que en el instante inicial.
-• Para un circuito RC: τ=RC.
-• Para un circuito RL: τ= 
-R
-L
-​
- .
-4. Solución Total y Determinación de la Constante K
-La solución final, tras determinar la constante K evaluando en t=0 
-+
- : $$D(t) = (D(0^+) - D_\infty(0^+)) e^{-\frac{t}{\tau}} + D_\infty(t) \text{$$$$}$$ Donde:
-• D(0 
-+
- ): Valor de la función en el estado inicial, determinado por las condiciones de continuidad.
-• D 
-∞
-​
- (0 
-+
- ): Valor de la función en régimen permanente, evaluado en t=0 
-+
- .
+# ⚡ Teoría de Circuitos III  
+## 📘 Tema: Ecuaciones de Primer Orden (RC / RL)
+
+---
+
+### 1. Ecuación General (Primer Orden)
+
+Un circuito con un único elemento almacenador de energía (RC o RL) se describe por una **ecuación diferencial lineal de primer orden**:
+
+$$
+a_1 \frac{dD(t)}{dt} + a_0 D(t) = g(t)
+$$
+
+Donde:
+
+- \( D(t) \): magnitud que buscamos (tensión o corriente).  
+- \( g(t) \): excitación del circuito.  
+
+---
+
+### 2. La Solución Total
+
+La solución general \( D(t) \) es la **suma** de la respuesta natural y la respuesta en régimen permanente:
+
+$$
+D(t) = D_0(t) + D_\infty(t)
+$$
+
+- **\( D_0(t) \)** → *Respuesta natural*: solución de la ecuación homogénea. Tiende a cero cuando \( t \to \infty \).  
+- **\( D_\infty(t) \)** → *Régimen permanente*: solución particular, coincide con el valor de \( D(t) \) cuando \( t \to \infty \).
+
+---
+
+### 3. Componente Natural y Constante de Tiempo \( \tau \)
+
+#### a) Forma de la Respuesta Natural
+
+Se obtiene al resolver la ecuación homogénea:
+
+$$
+a_1 \frac{dD(t)}{dt} + a_0 D(t) = 0
+$$
+
+La solución general es:
+
+$$
+D_0(t) = K e^{\lambda t}
+$$
+
+Donde \( \lambda = -\frac{1}{\tau} \). Sustituyendo:
+
+$$
+D_0(t) = K e^{-\frac{t}{\tau}}
+$$
+
+---
+
+#### b) Constante de Tiempo \( \tau \)
+
+A partir de los coeficientes \( a_1 \) y \( a_0 \):
+
+$$
+\tau = \frac{a_1}{a_0}
+$$
+
+> 🧠 **Interpretación:**  
+> \( \tau \) es el tiempo que tardaría la función en alcanzar su valor final si variara al mismo ritmo que en el instante inicial.
+
+Casos particulares:
+
+- Para un **circuito RC:** \( \tau = R C \)
+- Para un **circuito RL:** \( \tau = \frac{L}{R} \)
+
+---
+
+### 4. Solución Total y Determinación de la Constante \( K \)
+
+La solución completa, evaluada con la condición inicial en \( t = 0^+ \):
+
+$$
+D(t) = (D(0^+) - D_\infty(0^+)) \, e^{-\frac{t}{\tau}} + D_\infty(t)
+$$
+
+Donde:
+
+- \( D(0^+) \): valor inicial de la magnitud (según condiciones de continuidad).  
+- \( D_\infty(0^+) \): valor de la magnitud en régimen permanente evaluado en \( t = 0^+ \).  
+
+---
+
+> 🧩 **Resumen rápido:**
+> - Tipo de ecuación: primer orden.  
+> - Solución: suma de natural + forzada.  
+> - Constante de tiempo: \( \tau = \frac{a_1}{a_0} \).  
+> - Forma general: \( D(t) = (D(0^+) - D_\infty(0^+))e^{-t/\tau} + D_\infty \).
+
+---
+
+### ✏️ Notas adicionales
+
+- La forma exponencial \( e^{-t/\tau} \) define la **velocidad de transición** del sistema.  
+- Cuanto menor sea \( \tau \), más rápido el circuito alcanza el régimen permanente.  
+- En los transitorios, la energía se intercambia entre los elementos reactivos (L o C) y las resistencias.
+
+---
